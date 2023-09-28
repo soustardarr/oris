@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая вкладка</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Users/ruslan/Desktop/google chrome/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Users/ruslan/Desktop/google chrome/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Users/ruslan/Desktop/google chrome/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style>
+
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        .navigation{
+            display: grid;
+            grid-template-columns: 1fr min-content max-content;
+            align-items: center;
+            column-gap: 10px;
+            
+
+        }
+
+        .navigation_link:hover{
+            text-decoration: underline;
+        }
+
+        .navigation_list{
+            display: flex;
+            margin: 0;
+            padding:0;
+            list-style: none;
+            gap: 10px;
+            text-decoration: 0;
+            
+        }
+        .navigation_link{
+            padding: 5px;
+            text-decoration: none;
+            color: #202124;
+        }
+
+        .navigation_gap{
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+        }
+        
+        .page{
+            margin: 0;
+        }
+
+        .page,
+        .page_body{
+            height: 100%;
+        }
+
+
+
+        .page_body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        } 
+
+        .header{
+            padding: 15px 30px;
+        }
+        
+
+        .footer{
+            padding: 15px 30px;
+            background-color: #f2f2f2;
+        }
+        .apps{
+            height: 40px;
+            width: 40px;
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .apps:hover{
+            background-color: #f2f2f2;
+        }
+        
+        .icon{
+            margin: auto;
+            display: block;
+            fill: #5f6368;
+        }
+        .button{
+            margin: 0;
+            padding: 9px 23px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            
+        }
+        .button_action{
+            border: 1px solid #1a73e8;
+            background-color: #1a73e8;
+            color: #ffffff;
+        }
+        .button_action:hover{
+            background-color: #1b66c9;
+        }
+        .button_plain{
+            border: 1px solid #f8f9fa;
+            background-color: #f8f9fa;
+            color: #3c4043;
+
+        }
+
+        .main{
+            padding: 15px 30px;
+            display: grid;
+            place-content: center;
+            row-gap: 30px;
+            justify-items: center ;
+            margin-top: 136px;
+        }
+        .main_title{
+            margin:0;
+        }
+       
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: #f2f2f2;
+            color: #70757a;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            place-content: auto;
+            
+        }
+
+        
+
+        .footer_text {
+            width: 100%;
+            margin: 0;
+            padding: 15px 30px;
+            border-bottom: 1px solid #dadce0;
+        }
+
+   
+
+        .footer_list {
+            display: flex;
+            margin: 0;
+            padding: 15px 30px;
+            list-style: none;
+            
+        }
+
+ 
+
+        .footer_link {
+            padding: 15px;
+            text-decoration: none;
+            color: #70757a;
+        }
+        
+        .layout_main{
+            display: grid;
+            place-content: center;
+        }
+
+
+
+
+
+        .search{
+            
+            display: grid;
+            grid-template-columns: 44px 1fr 44px 44px;
+            place-content: center;
+            border: 0.7px solid #c3c7ce;
+            border-radius: 24px;
+            height: 46px;
+            width: 582px;
+            
+            
+            
+        }
+
+        .search_icon{
+            place-self: center;
+            fill: #9aa0a6;
+            width: 24;
+            height: 24;
+
+        }
+        
+        .search_input{
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        .search_button{
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            place-self: center;
+        }
+
+        .other_button{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .other_button a{
+            height: 36px;
+            min-width: 54px;
+            text-align: end;
+            cursor: pointer;
+            padding: 0 16px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+	        color: #3c4043;
+            margin-top: 20px;
+            text-decoration: none;
+            margin-right: 15px;
+            line-height: 35px;
+        }
+
+        .other_button a:hover{
+            border: 1px solid rgb(99, 95, 95);
+        }
+
+        
+    </style>
+    
+</head>
+<body class="page_body layout">
+    <header class="layout_header header">    
+        <nav class="navigation">
+            <ul class="navigation_gap">
+                <li class="navigation_gap"><a class="navigation_link" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&osid=1&passive=1209600&service=mail&ifkv=AXo7B7V16T4-WTCKv8cK8faFMkll7PTQCocwayMymU2VGjdh1uvI-ZFdWWoVUigUNCHOqm5Utkxp&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Почта</a></li>
+                <li class="navigation_gap"><a class="navigation_link" href="https://www.google.com/imghp?hl=ru&tab=ri&ogbl">Картинки</a></li>
+            </ul>
+            <button class="apps" type="button" aria-label="Приложения">
+                <a href="https://about.google/products/?tab=ih">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        
+                        <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"/>
+                    </svg>
+                </a>
+            </button>
+            <a  class="button button_action" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2Fimghp%3Fhl%3Dru%26tab%3Dri%26ogbl&ec=GAZAAg&hl=ru&passive=true&ifkv=AXo7B7UkwuilwNaYxjlHOwuWIMQ5lWbdp5kWBaRHtDMoaq0C9W-C1Qff5Qcy8IyhtHnLRxL7ylz3&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Войти</a>
+        </nav> 
+    </header>
+    <main class="layout_main main">
+        <h1 class="main_title">
+            <img class="main_logo" src="images/logo.svg" width="272" height="92" alt="Google">
+        </h1>
+        <search class="search">
+            <form action="">
+                <div class="search">
+                    <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+
+                    <input class="search_input" type="search">
+                    <!-- <button class="search_button" type="button">Экранная клавиатура</button> -->
+                    <button class="search_button" type="button">
+                        <svg class="search_fitcher" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"/>
+                            <path fill="#34a853" d="m11 18.08h2v3.92h-2z"/>
+                            <path fill="#fbbc05" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"/>
+                            <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"/>
+                        </svg>
+
+                    </button>
+                    <button class="search_button" type="button">
+                        <svg class="search_fitcher" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="24" height="24">
+                            <circle fill="#34a853" cx="144.07" cy="144" r="16"/>
+                            <circle fill="#4285f4" cx="96.07" cy="104" r="24"/>
+                            <path fill="#ea4335" d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"/>
+                            <path fill="#fbbc05" d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"/>
+                            <path fill="#4285f4" d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"/>
+                        </svg>
+                    </button>
+
+                </div>
+            </form>
+        </search>
+            
+        
+
+            
+
+        <div class="other_button">
+            <a href="#">Поиск в Google</a>
+            <a href="https://www.google.com/doodles">Мне повезет</a>
+        </div>
+    </main>
+    <footer class="layout_footer footer">
+        <p class="footer_text">Россия</p>
+        <ul class="footer_list">
+            <li><a class="footer_link" href="https://about.google/?utm_source=google-RU&utm_medium=referral&utm_campaign=hp-footer&fg=1">Все о Google</a></li>
+			<li><a class="footer_link" href="https://ads.google.com/intl/ru_ru/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Реклама</a></li>
+			<li><a class="footer_link" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Для бизнеса</a></li>
+			<li><a class="footer_link" href="https://www.google.com/search/howsearchworks/?fg=1">Как работает Google Поиск</a></li>
+            
+		</ul>
+        <ul class="footer_list">
+			<li><a class="footer_link" href="https://policies.google.com/privacy?hl=ru&fg=1">Конфиденциальность</a></li>
+			<li><a class="footer_link" href="https://policies.google.com/terms?hl=ru&fg=1">Условия</a></li>
+			<li><a class="footer_link" href="https://www.google.com/preferences?hl=ru&fg=1">Настройки</a></li>
+		</ul>
+    </footer>    
+</body>
+</html>
+
